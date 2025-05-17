@@ -28,6 +28,8 @@ ls var/www/html
 
 echo "doing ls here "
 ls
+echo "doing pwd here"
+pwd
 echo "[*] Copying new lab folders to $TARGET_DIR..."
 sudo cp -r "/sqli-basic" "$TARGET_DIR/"
 sudo cp -r "/sqli-union" "$TARGET_DIR/"
