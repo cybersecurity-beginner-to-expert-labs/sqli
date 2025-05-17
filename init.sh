@@ -20,24 +20,13 @@ done
 
 # === Prepare lab folders ===
 TARGET_DIR="/var/www/html"
-TMP_DIR=$(mktemp -d)
-
-echo "[*] Downloading lab files from GitHub..."
-
-# Download and extract sqli-basic
-curl -L -o "$TMP_DIR/sqli-basic.zip" https://github.com/cybersecurity-beginner-to-expert-labs/sqli/raw/main/sqli-basic.zip
-unzip -q "$TMP_DIR/sqli-basic.zip" -d "$TMP_DIR"
-
-# Download and extract sqli-union
-curl -L -o "$TMP_DIR/sqli-union.zip" https://github.com/cybersecurity-beginner-to-expert-labs/sqli/raw/main/sqli-union.zip
-unzip -q "$TMP_DIR/sqli-union.zip" -d "$TMP_DIR"
 
 echo "[*] Cleaning existing lab folders (if any)..."
 sudo rm -rf "$TARGET_DIR/sqli-basic" "$TARGET_DIR/sqli-union"
 
 echo "[*] Copying new lab folders to $TARGET_DIR..."
-sudo cp -r "$TMP_DIR/sqli-basic" "$TARGET_DIR/"
-sudo cp -r "$TMP_DIR/sqli-union" "$TARGET_DIR/"
+sudo cp -r -y "/sqli-basic" "$TARGET_DIR/"
+sudo cp -r -y "/sqli-union" "$TARGET_DIR/"
 sudo chown -R www-data:www-data "$TARGET_DIR/sqli-basic" "$TARGET_DIR/sqli-union"
 
 # === Check DB availability ===
