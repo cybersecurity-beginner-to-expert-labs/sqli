@@ -19,12 +19,12 @@ for service in apache2 mariadb; do
 done
 
 # === Prepare lab folders ===
-TARGET_DIR="var/www/html"
+TARGET_DIR="/var/www/html"
 
 echo "[*] Cleaning existing lab folders (if any)..."
 sudo rm -rf "$TARGET_DIR/sqli-basic" "$TARGET_DIR/sqli-union"
 echo contents of var/www/html
-ls var/www/html
+ls /var/www/html
 
 echo "doing ls here "
 ls
