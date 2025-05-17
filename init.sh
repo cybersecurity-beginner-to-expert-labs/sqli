@@ -31,8 +31,8 @@ ls
 echo "doing pwd here"
 pwd
 echo "[*] Copying new lab folders to $TARGET_DIR..."
-sudo cp -r "/sqli-basic" "$TARGET_DIR/"
-sudo cp -r "/sqli-union" "$TARGET_DIR/"
+sudo cp -r sqli-basic "$TARGET_DIR/"
+sudo cp -r sqli-union "$TARGET_DIR/"
 sudo chown -R www-data:www-data "$TARGET_DIR/sqli-basic" "$TARGET_DIR/sqli-union"
 
 # === Check DB availability ===
