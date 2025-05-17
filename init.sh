@@ -43,6 +43,9 @@ else
   echo "[!] Could not verify 'labdb'. Please ensure the database is preseeded and accessible."
 fi
 
+# === Turn Internet Off ===
+sudo nmcli networking off
+
 # === Done ===
 echo
 echo "[✓] SQLi Lab is ready:"
