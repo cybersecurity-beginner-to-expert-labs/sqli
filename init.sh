@@ -23,8 +23,6 @@ TARGET_DIR="/var/www/html"
 
 echo "[*] Cleaning existing lab folders (if any)..."
 sudo rm -rf "$TARGET_DIR/sqli-basic" "$TARGET_DIR/sqli-union"
-echo contents of var/www/html
-ls /var/www/html
 
 echo "[*] Copying new lab folders to $TARGET_DIR..."
 sudo cp -r sqli-basic "$TARGET_DIR/"
